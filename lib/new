@@ -1,0 +1,29 @@
+Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          const SizedBox(
+            height: 10,
+          ),
+          currentWeather(Icons.sunny, "20.6", "Anuradhapura"),
+          const SizedBox(
+            height: 60.0,
+          ),
+          const Text(
+            "Additional Information",
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
+          const Divider(),
+          additionalinformation("20", "100", "24", "26.3"),
+
+          //Api connection
+        ],
+      ),
+
+
+
+      @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    client.getcurrentweather("dambulla");
+  }
